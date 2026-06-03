@@ -1,0 +1,15 @@
+{
+    "name": "BeaconAdjust",
+    "version": "1.0.2",
+    "title": "Beacon Adjust",
+    "author": "BanSheeH2D",
+    "factorio_version": "2.0",
+    "dependencies": [
+        "base >= 2.0.0",
+        "quality >= 2.0.0",
+        "space-age >= 2.0.0",
+        "? MythicQuality"
+    ],
+    "description": "Adds a Adjustable slider that gives more or less range/module Eff and Adds more slots per quality"
+    
+}
