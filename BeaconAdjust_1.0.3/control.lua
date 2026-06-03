@@ -94,8 +94,8 @@ script.on_event(defines.events.on_gui_opened, function(event)
     
     local window = player.gui.relative.add{
         type = "frame", name = "brc_window", 
-        anchor = {gui = defines.relative_gui_type.beacon_gui, position = defines.relative_gui_position.right}, 
-        caption = "Zasięg Beacona"
+        anchor = {gui = defines.relative_gui_type.beacon_gui, position = defines.relative_gui_position.right},
+        caption = {"brc-gui.window-title"}
     }
     
     local flow = window.add{type = "flow", direction = "vertical"}
@@ -107,7 +107,7 @@ script.on_event(defines.events.on_gui_opened, function(event)
     local current_pct = pct or 100
     for i, v in ipairs(pct_steps) do if v == current_pct then slider.slider_value = i end end
     
-    flow.add{type = "label", name = "brc_label", caption = "Obecny zasięg: " .. current_pct .. "%"}
+    flow.add{type = "label", name = "brc_label", caption = {"brc-gui.current-range", current_pct}}
     
     storage.open = storage.open or {}
     storage.pending_swaps = storage.pending_swaps or {}
@@ -122,7 +122,7 @@ script.on_event(defines.events.on_gui_value_changed, function(event)
     local new_pct = pct_steps[event.element.slider_value]
     
     local label = event.element.parent.parent.brc_label
-    label.caption = "Zasięg po zamknięciu: " .. new_pct .. "%"
+    label.caption = {"brc-gui.range-after-close", new_pct}
     
     storage.pending_swaps = storage.pending_swaps or {}
     storage.pending_swaps[event.player_index] = new_pct
