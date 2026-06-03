@@ -1,0 +1,51 @@
+# Claude Code
+.claude/
+.claude/settings.local.json
+CLAUDE.local.md
+
+# OS files
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+# Linux
+*~
+.directory
+.Trash-*
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Logs
+*.log
+
+# Factorio mod packaging artifacts
+*.zip
+factorio-current.log
+
+# Lua build / luarocks
+*.luac
+.luarocks/
+lua_modules/
+
+# Environment / secrets
+.env
+.env.local
+*.secret
